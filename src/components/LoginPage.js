@@ -4,7 +4,12 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoLogoDiscord } from "react-icons/io5";
 import { AiFillTwitterCircle } from "react-icons/ai";
 
-const LoginPage = () => {
+const LoginPage = ({clickOpen}) => {
+
+  const handlesignIn = ()=>{
+    clickOpen(true)
+  }
+
   return (
     <div className="w-full flex md:flex-row flex-col">
       <div className="md:w-1/2 bg-blue-600 flex md:justify-center  md:items-center">
@@ -197,6 +202,7 @@ const LoginPage = () => {
                 <button
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  onClick={handlesignIn}
                 >
                   Sign in
                 </button>
